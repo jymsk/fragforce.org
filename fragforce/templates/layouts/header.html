@@ -27,8 +27,16 @@
             </ul>
             </li> 
             <li {{is_active('general.contact')}}><a href="{{ url_for('general.contact') }}">Contact</a></li>
-              <li {{is_active(section='sf_instance' )}}><a href="https://fragforce.my.salesforce.com">SFDC Internal</a>
+
+              <li class="dropdown {{is_active(section='sf_instance', noclass=True)}}">
+                  <a class="dropdown" href="https://fragforce.my.salesforce.com">Members<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li {{is_active(section='sf_instance' )}}><a href="https://fragforce.my.salesforce.com">SFDC
+                          Org</a></li>
+                  </ul>
               </li>
+
+
           </ul>
         </div> 
 
